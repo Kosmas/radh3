@@ -1,0 +1,5 @@
+== README
+
+Rails 4 Application Development HOTSHOT
+
+Online Social Pinboard example
