@@ -40,3 +40,6 @@ gem 'spring',        group: :development
 
 # Add authentication
 gem 'devise', '~> 3.2.4'
+
+# Add slug creation
+gem 'friendly_id', '~> 5.0.4'
