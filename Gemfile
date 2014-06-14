@@ -43,3 +43,7 @@ gem 'devise', '~> 3.2.4'
 
 # Add slug creation
 gem 'friendly_id', '~> 5.0.4'
+
+# Image manipulation
+gem 'rmagick', '~> 2.13.2'
+gem 'carrierwave', '~> 0.10.0'
