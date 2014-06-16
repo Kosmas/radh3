@@ -1,6 +1,6 @@
 <h1>Listing pins</h1>
 
-<table>
+<table id="posts">
   <thead>
     <tr>
       <th>Name</th>
@@ -10,11 +10,13 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="page">
     <% @pins.each do |pin| %>
-      <tr>
+      <tr class="post">
         <td><%= pin.name %></td>
-        <td><%= link_to(image_tag(pin.image.thumb.url), pin)  %></td>
+        <td><%= link_to(image_tag(pin.image.thumb.url), pin)  %><p>
+          <strong>Board:</strong><%= pin.board.title %><br/><%= pin.board.user.email unless pin.board.user.nil? %></p>
+        </td>           
         <td><%= pin.board_id %></td>
         <td><%= link_to 'Show', pin %></td>
         <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
