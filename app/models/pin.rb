@@ -4,4 +4,5 @@ class Pin < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
   belongs_to :board
+  paginates_per 10
 end
