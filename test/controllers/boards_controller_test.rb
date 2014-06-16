@@ -5,6 +5,10 @@ class BoardsControllerTest < ActionController::TestCase
     @board = boards(:one)
   end
 
+  def teardown
+    @board = nil
+  end
+
   test "should get index" do
     get :index
     assert_response :success

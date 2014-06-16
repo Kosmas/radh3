@@ -3,9 +3,9 @@
 one:
   name: MyString
   image: MyString
-  board_id: 1
+  board: one
 
 two:
   name: MyString
   image: MyString
-  board_id: 1
+  board: two

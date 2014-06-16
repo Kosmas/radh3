@@ -2,6 +2,7 @@ require 'test_helper'
 
 class PinsControllerTest < ActionController::TestCase
   setup do
+    @board = boards(:one)
     @pin = pins(:one)
   end
 
