@@ -1,33 +1,47 @@
-<h1>Listing pins</h1>
-
-<table id="posts">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Image</th>
-      <th>Board</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody class="page">
-    <% @pins.each do |pin| %>
-      <tr class="post">
-        <td><%= pin.name %></td>
-        <td><%= link_to(image_tag(pin.image.thumb.url), pin)  %><p>
-          <strong>Board:</strong><%= pin.board.title %><br/><%= pin.board.user.email unless pin.board.user.nil? %></p>
-        </td>           
-        <td><%= pin.board_id %></td>
-        <td><%= link_to 'Show', pin %></td>
-        <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<div id="main" role="main">
+  <table id="posts">
+    <tbody id="tiles" class="page">
+      <% @pins.each do |pin| %>
+        <tr class="post">
+          <td><%= pin.name %></td>
+          <td><%= link_to(image_tag(pin.image.thumb.url), pin)  %><p>
+            <strong>Board:</strong><%= pin.board.title %><br/><%= pin.board.user.email unless pin.board.user.nil? %></p>
+          </td>           
+          <td><%= pin.board_id %></td>
+          <td><%= link_to 'Show', pin %></td>
+          <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
+          <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= paginate @pins %>
+</div>
 <br>
 
 <%= link_to 'New Pin', new_pin_path %>
 
-<%= paginate @pins %>
+<script type="text/javascript">
+  (function ($){
+    var $handler = $('#tiles td');
+
+    $handler.wookmark({
+      // Prepare layout options
+      autoResize: true, // This will auto-update the layout when the browser window is resized
+      container: $('#main'),  // Optional, used for some extra CSS styling
+      offset: 5,  // Optional, the distance between grid items
+      outerOffset: 10,  // Optional, the distance to the containers border
+      itemWidth: 210  // Optional, the width of a grid item
+    });
+
+    // Capture clicks on grid items
+    $handler.click(function() {
+      // Randomize the height of the clicked item
+      var newHeight = $('img', this).height() + Math.round(Math.random() * 300 + 30);
+      $(this).css('height', newHeight + 'px');
+
+      // Update the layout
+      $handler.wookmark();
+    });
+  })(jQuery);
+</script>

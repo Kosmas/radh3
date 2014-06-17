@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery.infinitescroll
+//= require jquery.wookmark
 //= require_tree .
