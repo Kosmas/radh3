@@ -45,7 +45,7 @@ gem 'devise', '~> 3.4.1'
 gem 'friendly_id', '~> 5.0.4'
 
 # Image manipulation
-gem 'rmagick', '~> 2.13.3'
+gem 'rmagick', '~> 2.13.4'
 gem 'carrierwave', '~> 0.10.0'
 
 # paginator
