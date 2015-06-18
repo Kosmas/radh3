@@ -159,7 +159,7 @@ DEPENDENCIES
   devise (~> 3.5.1)
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.2.16)
-  jquery-rails (~> 4.0.3)
+  jquery-rails (~> 4.0.4)
   kaminari (~> 0.16.3)
   rails (= 4.2.2)
   rmagick (~> 2.15.2)
