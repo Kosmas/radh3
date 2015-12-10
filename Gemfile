@@ -39,7 +39,7 @@ gem 'spring', '~> 1.4.4', group: :development
 # gem 'debugger', group: [:development, :test]
 
 # Add authentication
-gem 'devise', '~> 3.5.2'
+gem 'devise', '~> 3.5.3'
 
 # Add slug creation
 gem 'friendly_id', '~> 5.1.0'
