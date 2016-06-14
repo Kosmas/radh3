@@ -49,4 +49,4 @@ gem 'rmagick', '~> 2.15.4'
 gem 'carrierwave', '~> 0.11.2'
 
 # paginator
-gem 'kaminari', '~> 0.16.3'
+gem 'kaminari', '~> 0.17.0'
