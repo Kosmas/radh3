@@ -42,7 +42,7 @@ gem 'spring', '~> 2.0.0', group: :development
 gem 'devise', '~> 4.2.0'
 
 # Add slug creation
-gem 'friendly_id', '~> 5.1.0'
+gem 'friendly_id', '~> 5.2.0'
 
 # Image manipulation
 gem 'rmagick', '~> 2.16.0'
