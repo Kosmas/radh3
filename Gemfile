@@ -46,7 +46,7 @@ gem 'friendly_id', '~> 5.2.0'
 
 # Image manipulation
 gem 'rmagick', '~> 2.16.0'
-gem 'carrierwave', '~> 0.11.2'
+gem 'carrierwave', '~> 1.0.0'
 
 # paginator
 gem 'kaminari', '~> 0.17.0'
